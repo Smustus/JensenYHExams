@@ -1,0 +1,714 @@
+:root {
+  --white: #fff;
+  --lighter: hsla(0, 0%, 100%, 0.4);  
+  --light: hsla(0, 0%, 100%, 0.7);  
+  --dark: hsla(0, 0%, 0%, 0.6);   
+  --darker: hsla(0, 0%, 0%, 0.8);   
+  --discount: hsl(0, 100%, 30%);
+  --davygray: hsl(310, 3%, 34%);
+  --lightblue: #8DA9C4;
+  --darkblue: #526679;
+  --blueBoxShadow: #83a5c4;
+  --blueGreen: #496f92;
+  --darkBlueGreen: #3a5774;
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: max(100vw, 350px);
+  min-height: 100vh;
+  background-color: var(--lightblue);
+}
+
+h1, h2, h3, h4 {
+  font-family: sans-serif, Arial, Helvetica;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 1.5rem + 2vw , 3.5rem);
+}
+h2 {
+  font-size: clamp(2.2rem, 1.5rem + 2vw , 3.2rem);
+}
+h3 {
+  font-size: clamp(1.9rem, 1.2rem + 2vw , 2.9rem);
+}
+h4 {
+  font-size: clamp(1.7rem, 1rem + 2vw , 2.6rem);
+}
+a, li{
+  color:hsl(0, 0%, 100%);
+  text-decoration: none;
+  color: var(--darker);
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+a:hover {
+  color: hsla(0, 0%, 100%, 0.658);
+}
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--dark);
+}
+
+.whiteText {
+  color: var(--white);
+}
+
+.discount {
+  color: var(--discount);
+}
+
+.c-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.r-flex {
+  display: flex;
+}
+
+button, .resetBtn, .submitBtn, .filterRooms__resetBtn {
+  background-color: var(--blueGreen);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+}
+
+button:hover, .resetBtn:hover, .submitBtn:hover, .filterRooms__resetBtn:hover, .roomPreview__link:hover {
+  background-color: #5e8cb8;
+  box-shadow: 1px 2px 5px #51779e;
+}
+
+/* STRUCTURE&BLOCK STYLING */
+.wrapper {
+  min-width: 22rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: auto;
+  grid-template-areas: 
+  "header header header header header header"
+  ". navigation navigation navigation navigation ."
+  "main main main main main main"
+  "footer footer footer footer footer footer";
+}
+
+.wrapperRooms {
+  min-width: 21rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: auto;
+  grid-template-areas: 
+  "header header header header header header"
+  ". navigation navigation navigation navigation ."
+  "aside aside aside aside aside aside"
+  "mainRoomsPage mainRoomsPage mainRoomsPage mainRoomsPage mainRoomsPage mainRoomsPage"
+  "footer footer footer footer footer footer";
+}
+
+.header {
+  grid-area: header;
+  height: 30rem;
+  background-color: var(--lighter);
+  background-image: url(../assets/photos/09-day.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left top 60%;
+  display: flex;
+  align-items: center;
+}
+
+.navigation {
+  grid-area: navigation;
+  height: 4rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.main {
+  grid-area: main;
+  min-height: 20rem;
+  background-color: var(--lighter);
+}
+
+.aside {
+  grid-area: aside;
+  min-height: 18rem;
+  background-color: var(--lighter);
+  padding: 1rem;
+}
+
+.mainRoomsPage {
+  grid-area: mainRoomsPage;
+  min-height: 20rem;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #60788d;
+  color: var(--white);
+  padding: 5%;
+  justify-content: space-around;
+}
+
+/* HEADER ELEMENT STYLINGS */
+.header__logo {
+  height: 100%;
+}
+
+.header__logo img {
+  height: 100%;
+}
+
+.header__title {
+  width: 75%;
+  padding: 5%;
+  text-shadow: 1px 1px 5px rgb(228, 228, 228);
+}
+
+/* NAV ELEMENT STYLINGS */
+.navigation__link {
+  padding: 0 10% 0 10%;
+  margin: 0 5% 0 5%;
+}
+
+/* MAIN ELEMENT STYLINGS */
+/* MAIN HOMEPAGE ELEMENT STYLINGS */
+.welcome {
+  align-items: center;
+  border-top: 3px solid var(--blueBoxShadow);
+  text-align: center;
+}
+
+.welcome__title {
+  margin: 4% 15% 2% 15%;
+  color: var(--dark);
+  text-shadow: 0px 5px 5px rgba(88, 88, 88, 0.6);
+}
+
+.welcome__text {
+  padding: 2% 15%;
+}
+
+.smallRoomPreview {
+  justify-content: center;
+  padding: 2% 0 4% 0;
+  width: 100%;
+}
+
+.smallRoomPreview__card {
+  background-color: var(--lighter);
+  width: 25%;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 0.6% 0 0.6%;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0px 6px 10px var(--blueBoxShadow);
+}
+
+.smallRoomPreview__card img {
+  width: 98%;
+  border-radius: 15px 15px 0px 0px;
+  margin: 1% 0% 6% 0%;
+  box-shadow: 0px 6px 10px var(--blueBoxShadow);
+}
+
+.smallRoomPreview__card p {
+  margin: 2%;
+  padding: 1%;
+}
+
+.smallRoomPreview__card .smallRoomPreview__price {
+  align-self: flex-end;
+}
+
+.main__linkRooms {
+  background-color: var(--lightblue);
+  width: 100%;
+  font-size: 3rem;
+  padding: 1%;
+  text-align: center;
+  border: 3px solid var(--blueBoxShadow);
+  text-shadow: 0px 3px 5px rgba(88, 88, 88, 0.8);
+  color: var(--dark);
+}
+
+/* MAIN ROOMS AND FACILITY ELEMENT STYLING */
+.filterRooms {
+  grid-area: 1 / 1 / span 1 / span 6;
+  align-items: center;
+  justify-content: center;
+  border-top: 3px solid var(--blueBoxShadow);
+}
+
+.filterRooms__form {
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  width: 96%;
+}
+
+.filterRooms h3, .roomPreview h4 {
+  color: var(--dark);
+  text-shadow: 0px 3px 5px rgba(88, 88, 88, 0.555);
+}
+
+.filterRooms__form label {
+  margin: 5% 0.5% 5% 5%;
+}
+
+.filterRooms__form input {
+  margin: 5% 5% 5% 0%
+}
+
+.filterRooms__resetBtn {
+  border-radius: 10px;
+  margin: 1% 0 1% 5%;
+  padding: 12px 24px;
+  box-shadow: 1px 1px 5px var(--darkBlueGreen);
+}
+
+.filterRooms__submitBtn {
+  border-radius: 10px;
+  margin: 1% 0 1% 0;
+  padding: 21px 30px;
+  box-shadow: 1px 1px 5px var(--darkBlueGreen);
+}
+
+.roomPreview {
+  justify-content: center;
+  align-items: center;
+  border-top: 3px solid var(--blueBoxShadow);
+  border-bottom: 3px solid var(--blueBoxShadow);
+}
+
+.roomPreview__links {
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.roomPreview__link {
+  background-color: var(--blueGreen);
+  color: var(--white);
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 2% 1% 6% 1%;
+  padding: 20px;
+  box-shadow: 1px 1px 5px var(--darkBlueGreen);
+}
+
+.roomPreview__topInfo {
+  width: 60%;
+  padding: 2%;
+  text-align: center;
+}
+
+.roomPreview__topInfo p {
+  padding-top: 3%;
+}
+
+.largeRoomPreview {
+  background-color: var(--lighter);
+  width: 80%;
+  min-width: 730px;
+  margin: 2% 2% 4% 2%;
+  padding: 1% 1%;
+  border-radius: 25px;
+  box-shadow: 0px 6px 10px var(--blueBoxShadow);
+}
+
+.largeRoomPreview__imgAndList img {
+  width: 100%;
+  max-width: 150rem;
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 0px 6px 10px var(--blueBoxShadow);
+}
+
+.roomPreview ul {
+  margin: 1% 2% 0 3%;
+  list-style: disc;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.largeRoomPreview__imgAndList h3 {
+  margin: 2% 0%;
+}
+
+.largeRoomPreview__textAndBtn {
+  background-color: var(--lighter);
+  border-radius: 15px 15px 15px 15px;
+  width: 100%;
+  min-width: 350px;
+  margin: 0% 0% 0% 1%;
+  padding: 1% 1%;
+  align-items: center;
+  box-shadow: 0px 6px 10px var(--blueBoxShadow);
+}
+
+.largeRoomPreview__textAndBtn p {
+  width: 100%;
+  padding: 1% 1% 3% 1%;
+  margin-bottom: auto;
+}
+
+.largeRoomPreview__availBtn {
+  width: 90%;
+  margin: auto 0% 2% 2%;
+  padding: 1.5% 2%;
+  border-radius: 15px;
+  box-shadow: 0px 6px 10px var(--blueBoxShadow);
+}
+
+/* MAIN BOOKING PAGE */
+.bookingContainer {
+  align-items: center;
+  padding: 4%;
+  border-top: 3px solid var(--blueBoxShadow);
+  border-bottom: 3px solid var(--blueBoxShadow);
+}
+
+.bookingContainer__title {
+  margin-bottom: max(2%, 2vh);
+}
+
+.bookingForm {
+  justify-content: center;
+  align-items: center;
+  margin: 2%;
+}
+
+.main__roomBookingFlex {
+  padding: 2%;
+}
+
+.bookingForm__textDate {
+  width: max(20vw, 250px);
+}
+
+.bookingForm__textDate input, .bookingForm__textDate label {
+  margin: 2%;
+}
+
+.bookingForm__roomOption {
+  padding: 2%;
+  width: 100%;
+  justify-content: center;
+  font-size: clamp(1.24rem, 0.6rem + 1vw, 1.5rem);
+}
+
+.bookingForm__roomOption label {
+  margin: 0 0 0 max(5%, 1.6vh);
+}
+
+.bookingForm__roomOption input {
+  margin: 0 max(4%, 1vh) 0 max(0.1%, 0.5vh);
+}
+
+.resetBtn, .submitBtn {
+  border-radius: 10px;
+  margin: max(1%, 1vh) 0 max(1%, 1vh) 0;
+  padding: 21px;
+  box-shadow: 1px 1px 5px var(--darkBlueGreen);
+}
+
+/* FOOTER ELEMENT STYLINGS */
+.contact__title, .contact__text {
+  margin-bottom: 3%;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+.socialMedia__link {
+  color: var(--white);
+}
+
+@media screen and (max-width: 960px) {
+  a, li{
+    font-size: 0.9rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+
+  /* HEADER ELEMENT STYLINGS @960 */
+  .header__logo {
+    height: 90%;
+  }
+
+  /* NAV ELEMENT STYLINGS @960 */
+  .navigation__link {
+    padding: 0 5% 0 5%;
+    margin: 0 5% 0% 5%;
+  }
+
+  /* MAIN HOMEPAGE ELEMENT STYLINGS @960 */
+  .smallRoomPreview {
+    padding: 0% 0 6% 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .smallRoomPreview__card {
+    min-width: 500px;
+    margin: 0% 0.6% 3% 0.6%;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  /* STRUCTURE&BLOCK STYLING @760 */
+  .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "navigation"
+    "main"
+    "footer";
+  }
+  
+  .wrapperRooms {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "header"
+    "navigation"
+    "aside"
+    "mainRoomsPage"
+    "footer";
+  }
+  
+  .aside {
+    min-height: 16rem;
+  }
+
+  /* HEADER ELEMENT STYLINGS @760 */
+  .header__logo {
+    height: 90%;
+    width: 80%;
+  }
+
+  .header__logo img {
+    height: 90%;
+  }
+
+  /* NAV ELEMENT STYLINGS @760 */
+  .navigation__link {
+    padding: 0 1% 0 1%;
+    margin: 0 1% 0 1%;
+  }
+
+  /* MAIN HOMEPAGE ELEMENT STYLINGS @760 */    
+  .welcome__text {
+    padding: 2% 15%;
+  }
+  
+  .smallRoomPreview {
+    padding: 2% 0 4% 0;
+  }
+  
+  .smallRoomPreview__card {
+    min-width: 400px;
+    border-radius: 18px;
+  }
+  
+  .main__linkRooms {
+    font-size: 2.2rem;
+  }
+  
+  /* MAIN ROOMS AND FACILITY ELEMENT STYLING @760 */
+  .filterRooms__form {
+    width: 88%;
+  }
+
+  .filterRooms label {
+    margin: 5% 0.5% 5% 2%;
+  }
+
+  .filterRooms input {
+    margin: 5% 4% 5% 0%
+  }
+
+  .largeRoomPreview {
+    min-width: 450px;
+    border-radius: 22px;
+    flex-direction: column;
+  }
+
+  .largeRoomPreview__imgAndList {
+    margin-bottom: 2%;
+  }
+
+  .largeRoomPreview__imgAndList h3 {
+    margin: 1.5% 1%;
+  }
+
+  .largeRoomPreview__textAndBtn {
+    margin: 0%;
+  }
+
+  .largeRoomPreview__textAndBtn p {
+    padding: 1% 2% 3% 2%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  /* HEADER ELEMENT STYLINGS @550 */
+  .header__logo {
+    height: 80%;
+    width: 80%;
+    text-align: center;
+  }
+
+  .header__logo img {
+    height: 80%;
+  }
+
+  /* MAIN ROOMS AND FACILITY ELEMENT STYLING @550 */
+  .filterRooms__form {
+    height: 6rem;
+    width: 30%;
+  }
+
+  .filterRooms label {
+    margin: 5% 0.5% 5% 5%;
+  }
+
+  .filterRooms input {
+    margin: 5% 5% 5% 0%
+  }
+
+  .filterRooms__resetBtn {
+    padding: 18px 24px;
+  }
+
+  .largeRoomPreview {
+    min-width: 400px;
+  }
+
+  .roomPreview__topInfo {
+    width: 82%;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  /* STRUCTURE&BLOCK STYLING @460 */
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navigation {
+    height: 3rem;
+  }
+  
+  .aside {
+    min-height: 13rem;
+  }
+
+  /* HEADER ELEMENT STYLINGS @460 */
+  .header__logo {
+    height: 60%;
+  }
+
+  .header__logo img {
+    height: 100%;
+  }
+
+  .header__title {
+    width: 85%;
+    text-align: center;
+  }
+
+  /* MAIN HOMEPAGE ELEMENT STYLINGS @460 */  
+  .welcome__title {
+    margin: 4% 10% 2% 10%;
+  }
+  
+  .welcome__text {
+    padding: 2% 10%;
+  }
+  
+  .smallRoomPreview__card {
+    min-width: 280px;
+  }
+  
+  .main__linkRooms {
+    font-size: 1.6rem;
+  }
+
+  /* MAIN ROOMS AND FACILITY ELEMENT STYLING @460 */
+  .navigation {
+    justify-content: center;
+  }
+
+  .navigation__link {
+    margin:0 0.5% 0 0.5%;
+  }
+
+  .filterRooms__form {
+    height: 15rem;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .largeRoomPreview {
+    width: 86%;
+    min-width: 330px;
+    border-radius: 19px;
+  }
+
+  .largeRoomPreview__imgAndList {
+    min-width: 300px;
+  }
+
+  .largeRoomPreview ul {
+    margin: 1% 2% 0 4%;
+  }
+
+  .largeRoomPreview__imgAndList h3 {
+    margin: 2% 0.4%;
+  }
+
+  .largeRoomPreview__textAndBtn {
+    min-width: 300px;
+  }
+
+  .largeRoomPreview__textAndBtn p {
+    padding: 1% 2% 3% 2%;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 2%;
+  }
+
+  @media screen and (max-width: 416px) {
+    /* HEADER ELEMENT STYLINGS @416 */
+    .header__logo {
+      height: 53%;
+    }
+
+    /* MAIN BOOKING PAGE */    
+    .bookingForm__roomOption label {
+      margin: 0 1% 0 1%;
+    }
+    
+    .bookingForm__roomOption input {
+      margin: 0 3% 0 0;
+    }
+  }
+}

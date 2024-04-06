@@ -1,0 +1,44 @@
+/* ---------------------------------------- */
+html {
+  font-size: 20px;
+}
+
+h1, h2 {
+  font-family: 'Lilita One', sans-serif;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+p, a, h3, h4 {
+  font-family: 'Karla', sans-serif;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.55rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1.125rem; 
+}
+
+p {
+  font-size: 1rem;
+}
+
+.greenText {
+  color: var(--DarkGreen);
+}
+
+.redText {
+  color: var(--Red);
+}

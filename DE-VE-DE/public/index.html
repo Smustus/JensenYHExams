@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>DE-VE-DE Exam</title>
+</head>
+<body>
+
+  <header class="header">
+
+    <section class="header__introSection">
+      <p class="header__introText">
+        Ever heard about a good movie, become real enthusiastic, and forgot all about it whenever you came home? And eventually the person recommending it is keen to know what you thought about it. Not a good feeling ye?
+      </p>
+      <p class="header__introText">
+      Dont worry! Here you can add the movies you're keen to watch, and why not add a movie description to help stay motivated? Here you may also keep track of what you watched or even remove movies if you wish to forget all about them.  
+      </p>
+      <p class="header__introText">
+        Start today! With a subscription of measly <span class="priceRed">$13.37/year</span>.
+        No longer do you need to feel anxious about meeting that person and experience the notion of guilt!
+      </p>
+      <button class="header__introBtn">Subscribe now!</button>
+      
+    </section>
+    <button class="header__hideBtn">&#11165;</button>
+
+    <section class="header__inputSection">
+      <div>
+        <label for="title">Title: </label>
+        <input type="text" class="movieTitleInput" id="title" placeholder="Enter movie title" required>
+      </div>
+      <div>
+        <label for="genre">Genre: </label>
+        <select id="movieGenre" class="movieGenre" name="movieGenre" required>
+          <option value="action">Action</option>
+          <option value="comedy">Comedy</option>
+          <option value="drama">Drama</option>
+          <option value="fantasy">Fantasy</option>
+          <option value="sci-fi">Science Fiction</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div>
+        <label for="releaseYear">Release year: </label>
+        <input type="number" class="movieReleaseYear" id="releaseYear" placeholder="Enter year of release" min="1800" max="2024" required>
+      </div>
+      <div>
+        <label for="description">Description: </label>
+        <textarea rows="4" cols="50" class="movieDescription" id="description" placeholder="Enter movie description" required></textarea>
+      </div>
+      <button class="header__addMovieBtn">Add movie</button>
+    </section>
+
+  </header>
+
+  <nav>
+    <button class="nav__categoryAction">Action</button>
+    <button class="nav__categoryComedy">Comedy</button>
+    <button class="nav__categoryDrama">Drama</button>
+    <button class="nav__categoryFantasy">Fantasy</button>
+    <button class="nav__categorySci-Fi">Sci-Fi</button>
+    <button class="nav__categoryOther">Other</button>
+  </nav>
+
+  <main class="main">
+    <h1 class="main__title">Movies</h1>
+    <section class="main__searchMovie">
+      <label for="searchMovie">Search: </label>
+      <input type="text" class="main__searchMovieInput" id="searchMovie" placeholder="Search movie title">
+      <button class="main__searchMovieBtn">Search</button>
+    </section>
+    <section class="main__movieContainer"></section>
+  </main>
+
+  <footer class="footer">
+    <p>2023 &#169;</p>
+  </footer>
+
+  <script type="module" src="scripts/main.js"></script>
+</body>
+</html>

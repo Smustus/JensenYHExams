@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Lilita+One&display=swap');
+/* -------------------------------------------------------------------- */
+/* -------------------------UNSPECIFIC STYLING------------------------- */
+:root {
+  --Red: #FF1212;
+  --DarkRed: #B51515;
+  --DarkerRed: #951414;
+
+  --SoftGreen: #C8E2D1;
+  --Green: #1DA84C;
+  --DarkGreen: #17883D;
+
+  --Orange: #DE803C;
+  --DarkOrange: #BE6C31;
+
+  --Grey: #DBDBDB;
+  --DarkGrey: #A5A5A5;
+
+  --SoftPink: #E2A5B7;
+  --Pink: #D392A5;
+
+  --SoftBlue: #5D9AD3;
+  --Blue: #4B83B7;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px dotted lightcoral; */
+}
+
+/* ---------------------------------------- */
+button {
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Lilita One', sans-serif;
+  min-height: 50px;
+}
+
+.redBtn {
+  background-color: var(--DarkRed);
+  border: 1px solid var(--DarkerRed);
+}
+
+.orangeBtn {
+  background-color: var(--Orange);
+  border: 1px solid var(--DarkOrange);
+}
+
+.greenBtn {
+  background-color: var(--Green);
+  border: 1px solid var(--DarkGreen);
+}
+
+.blueBtn {
+  background-color: var(--SoftBlue);
+  border: 1px solid var(--Blue);
+}
+
+.pinkBtn {
+  background-color: var(--SoftPink);
+  border: 1px solid var(--Pink);
+}
+
+.smallBtn {
+  font-family: 'Karla', sans-serif;
+  padding: 0.3rem 1rem;
+  font-size: 1.125rem;
+}
+
+.midBtn {
+  padding: 1rem 2rem;
+  font-size: 1.55rem;
+}
+
+.largeBtn {
+  padding: 1.6rem 2.0rem;
+  font-size: 1.6rem;
+}
+
+.logoutBtn {
+  color: rgb(0, 0, 0);
+  background-color: var(--Grey);
+  border: 1px solid var(--DarkGrey);
+}
+
+.returnBtn {
+  color: rgb(0, 0, 0);
+  background-color: var(--SoftGreen);
+  width: fit-content;
+  padding: 2%;
+  border: none;
+  margin-bottom: 2%;
+}
+
+.product_reserveBtn {
+  margin: 0;
+}
+
+.swapOverviewBtn_borrow, .swapOverviewBtn_lend {
+  min-height: 70px;
+  background-color: white;
+  color: black;
+  width: 100%;
+  border-top: 1px solid var(--DarkGreen);
+  border: 1px solid var(--DarkGreen);
+  border-radius: 15px 15px 0px 0px;
+  padding: 0;
+}

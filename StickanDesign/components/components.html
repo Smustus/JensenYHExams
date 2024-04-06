@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/containers.css">
+  <link rel="stylesheet" href="styles/buttons.css">
+  <link rel="stylesheet" href="styles/inputs&labels.css">
+  <link rel="stylesheet" href="styles/texts&link.css">
+  <title>Components, Stickans Verktygsbibliotek</title>
+</head>
+<body>
+
+  <h1 class="loginPage_title">STICKANS VERKTYGSBIBLIOTEK</h1>
+
+  <br><hr>
+  
+  <button class="returnBtn largeBtn" onclick="window.location.href = ''">&#x3c; Tillbaka</button>
+
+  <br><hr>
+
+  <button class="smallBtn">Reservera</button>
+
+  <br><hr>
+
+  <button class="midBtn">Reservera</button>
+
+  <br><hr>
+
+  <button class="largeBtn">Reservera</button>
+
+  <br><hr>
+
+  <button class="midBtn redBtn">Red</button>
+  <button class="midBtn greenBtn">Green</button>
+  <button class="midBtn blueBtn">Blue</button>
+  <button class="midBtn pinkBtn">Pink</button>
+  <button class="midBtn orangeBtn">Orange</button>
+  <button class="midBtn logoutBtn">Logout</button>
+
+  <br><hr>
+
+  <input type="text" class="textInputFields" placeholder="Lösenord">
+
+  <br><hr>
+
+  <label for="toolCategory">Kategori:</label>
+  <br>
+  <select id="toolCategory">
+    <option value="Plattsattning">Plattsättning</option>
+    <option value="Snickeri">Snickeri</option>
+    <option value="Mureri">Mureri&Puts</option>
+    <option value="Maleri">Måleri</option>
+    <option value="Annat">Annat</option>
+  </select>
+
+  <br><hr>
+
+  <label for="reserveFrom">Reservera från:</label><br>
+  <input type="date" id="reserveFrom" class="dateInputFields">
+
+  <br><hr>
+
+  <div class="searchContainer">
+    <img src="../assets/icons/magnifyingGlass2.svg" alt="" srcset="">
+    <input type="text" class="searchField" placeholder="Sök redskap här...">
+  </div>
+
+  <br><hr>
+
+  <article class="receiptContainer">
+    <a href=""><img src="../assets/icons/list.svg" alt="" srcset="">Kvitto</a>
+  </article>
+
+  <br><hr>
+
+  <article class="productContainer_Small">
+    <section class="productContainer_pictureSection">
+      <img src="../assets/product-pictures/kakelskar.jpg" alt="kakelskär" srcset="">
+    </section>
+    <section class="productContainer_textInfo">
+      <h4 class="product_title">Kakel-, klinkersskär</h3>
+      <p class="product_text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+      <p class="product_place">Plats: <b>4B</b></p>
+      <p class="product_status">Status: <span class="greenText"><b>Ledig</b></span></p>
+      <button class="product_reserveBtn smallBtn">Reservera</button>
+    </section>
+  </article>
+
+  <br><hr>
+
+  <article class="productContainer_Large">
+    <section class="productContainer_pictureSection">
+      <img src="../assets/product-pictures/kakelskar.jpg" alt="kakelskär" srcset="">
+    </section>
+    <section class="productContainer_textInfo">
+      <h3 class="product_title">Kakel-, klinkersskär</h3>
+      <p class="product_place">Plats: <b>4B</b></p>
+      <p class="product_status">Status: <span class="greenText"><b>Ledig</b></span></p>
+      <p class="product_returnText">Ledig fr.o.m. idag</p>
+      <label for="reserveFrom">Reservera från:</label>
+      <input type="date" id="reserveFrom" class="dateInputFields">
+      <label for="reserveTo">Reservera till:</label>
+      <input type="date" id="reserveTo" class="dateInputFields">
+      <button class="product_reserveBtn midBtn">Reservera</button>
+    </section>
+  </article>
+  
+</body>
+</html>

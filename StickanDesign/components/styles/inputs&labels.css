@@ -1,0 +1,105 @@
+/* --------------------------------------------------------------- */
+/* --------------GENERAL LABEL&INPUT, TEXTAREA&SELECT------------- */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  * {
+    width: 100%;
+  }
+
+  .midBtn {
+    margin-bottom: 4%;
+  }
+}
+
+label {
+  font-family: 'Karla', sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+input, textarea, select {
+  background-color: var(--Grey);
+  border: 1px solid var(--DarkGrey);
+  font-family: 'Karla', sans-serif;
+  font-size: 1.25rem;
+}
+
+input:focus-within, textarea:focus-within {
+  outline: 2px solid var(--DarkGreen);
+}
+
+textarea {
+  padding: 0;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+select {
+  width: 90%;
+  align-self: center;
+  padding: 1rem;
+  font-size: 1.125rem;
+  border-radius: 6px;
+}
+/* -------------------------------------------------------------- */
+/* --------------------------TEXT INPUT-------------------------- */
+.textInputFields {
+  padding: 1rem;
+  font-size: 1.125rem;
+  border-radius: 6px;
+}
+
+/* -------------------------------------------------------------- */
+/* --------------------------DATE INPUT-------------------------- */
+.dateInputFields {
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  margin-bottom: 2%;
+  font-size: 1.125rem;
+  text-align: center;
+  align-self: center;
+  width: 80%;
+}
+
+#reserveTo {
+  margin-bottom: 9%;
+}
+
+/* --------------------------------------------------------------- */
+/* -------------------------SEARCH INPUT-------------------------- */
+.searchContainer {
+  background-color: var(--Grey);
+  display: flex;
+  width: fit-content;
+  border-radius: 15px;
+  border: 1px solid var(--DarkGrey);
+  padding: 1%;
+  margin-bottom: 10%;
+}
+
+.searchContainer:focus-within {
+  outline: 2px solid var(--DarkGreen);
+}
+
+.searchField {
+  margin-left: 3%;
+  border-radius: 0 15px 15px 0;
+  border: none;
+  width: 100%;
+}
+
+.searchField:focus-within {
+  outline: none;
+}
+
+/* --------------------------------------------------------------- */
+/* ---------------------------FILE INPUT-------------------------- */
+#imgUpload {
+  padding: 1%;
+}
+
+

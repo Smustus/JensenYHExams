@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/hotel.css">
+  <title>Rooms</title>
+</head>
+<body>
+
+  <div class="wrapperRooms">
+
+    <header class="header">
+      <figure class="header__logo">
+        <img src="assets/logo/bonz.ai-logo-white-portrait-full.png" alt="" class="">
+      </figure>
+      <h1 class="header__title whiteText">
+        When was the last time you relaxed for real?
+      </h1>
+    </header>
+
+    <nav class="navigation">
+      <a href="home.html" class="navigation__link">
+        Home
+      </a>
+      <a href="rooms.html" class="navigation__link">
+        Rooms&#160&&#160Facility
+      </a>
+      <a href="book.html" class="navigation__link">
+        Book&#160now
+      </a>
+      <a href="#contact" class="navigation__link">
+        Contact
+      </a>
+    </nav>
+
+    <main class="mainRoomsPage">
+
+      <aside class="aside filterRooms c-flex">
+
+        <h3>Filter rooms</h3>
+        <form action="" method="GET" class="r-flex filterRooms__form">
+          <label for="wifi">Free Wi-fi</label>
+          <input type="checkbox" id="wifi" class="filterRooms__option">
+          <label for="fruit">Fruit bowl upon arrival</label>
+          <input type="checkbox" id="fruit" class="filterRooms__option">
+          <label for="terrace">Private terrace</label>
+          <input type="checkbox" id="terrace" class="filterRooms__option">
+          <label for="bible">Bible included</label>
+          <input type="checkbox" id="bible" class="filterRooms__option">
+          <label for="cats">Unlimited cat access</label>
+          <input type="checkbox" id="cats" class="filterRooms__option">
+          <input type="reset" class="filterRooms__resetBtn">
+        </form>
+        <button class="filterRooms__submitBtn" onclick="">Filter</button>
+        
+      </aside>
+
+      <section class="roomPreview c-flex">
+
+        <div class="roomPreview__topInfo c-flex">
+
+          <nav class="roomPreview__links r-flex">
+            <a href="#roomStandard" class="roomPreview__link">
+              Standard
+            </a>
+            <a href="#roomSuperior" class="roomPreview__link">
+              Superior
+            </a>
+            <a href="#roomPremium" class="roomPreview__link">
+              Premium
+            </a>
+          </nav>
+
+          <h4>
+            All our rooms are <span class="discount">$69.69</span>&#160/&#160night, because.
+          </h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, pariatur. Iste sequi eum fugit, saepe quasi error natus aliquid. Voluptates ipsa odit consequuntur aliquid quidem a, labore dolore officia sit. Sed tempore iste assumenda natus! Facere totam distinctio laudantium a.</p>
+        </div>
+
+        <article class="largeRoomPreview r-flex" id="roomStandard">
+          <div class="largeRoomPreview__imgAndList">
+            <img src="assets/photos/08-day.jpg" alt="">
+            <h3>Standard</h3>
+            <ul class="largeRoomPreview__list">
+              <li>
+                1 Kingsize double bed + soda bed
+              </li>
+              <li>
+                46 sqm
+              </li>
+              <li>
+                Wi-fi access, $1 / hour
+              </li>
+              <li>
+                Free parking
+              </li>
+              <li>
+                Unlimited cats
+              </li>
+              <li>
+                Private terrace
+              </li>
+              <li>
+                Free bible, to educate your lemming kids
+              </li>
+            </ul>
+          </div>
+          <div class="largeRoomPreview__textAndBtn c-flex">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque harum nulla repudiandae corporis dolorem deserunt exercitationem earum et corrupti inventore enim unde dolores aliquid ipsa, accusantium, sapiente illo hic dicta aut. 
+              Neque quos dolorum fugiat ex eligendi saepe at corrupti a alias animi. Commodi, quas molestias. 
+              Maiores obcaecati voluptatibus quidem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque magnam assumenda dolorum ratione maiores labore. 
+              Suscipit dolorem dolores ex et sint ab corrupti aut repellat.
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque harum nulla repudiandae corporis dolorem deserunt exercitationem earum et corrupti inventore enim unde dolores aliquid ipsa, accusantium, sapiente illo hic dicta aut.
+              Neque quos dolorum fugiat ex eligendi saepe at corrupti a alias animi. Commodi, quas molestias. Maiores obcaecati voluptatibus quidem. 
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque magnam assumenda dolorum ratione maiores labore. Suscipit dolorem dolores ex et sint ab corrupti aut repellat.
+            </p>
+            <button class="largeRoomPreview__availBtn" onclick="window.location.href='book.html'">
+              Check availability
+            </button>
+          </div>
+        </article>
+
+        <article class="largeRoomPreview r-flex" id="roomSuperior">
+          <div class="largeRoomPreview__imgAndList">
+            <img src="assets/photos/06-day.jpg" alt="">
+            <h3>Superior</h3>
+            <ul class="largeRoomPreview__list">
+              <li>
+                1 Kingsize double bed + soda bed
+              </li>
+              <li>
+                51 sqm
+              </li>
+              <li>
+                Free Wi-fi
+              </li>
+              <li>
+                Free parking
+              </li>
+              <li>
+                Unlimited cats
+              </li>
+              <li>
+                Fruit bowl upon arrival
+              </li>
+              <li>
+                Free bible, to educate your lemming kids
+              </li>
+            </ul>
+          </div>
+          <div class="largeRoomPreview__textAndBtn c-flex">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque harum nulla repudiandae corporis dolorem deserunt exercitationem earum et corrupti inventore enim unde dolores aliquid ipsa, accusantium, sapiente illo hic dicta aut. 
+              Neque quos dolorum fugiat ex eligendi saepe at corrupti a alias animi. Commodi, quas molestias. 
+              Maiores obcaecati voluptatibus quidem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque magnam assumenda dolorum ratione maiores labore. 
+              Suscipit dolorem dolores ex et sint ab corrupti aut repellat.
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque harum nulla repudiandae corporis dolorem deserunt exercitationem earum et corrupti inventore enim unde dolores aliquid ipsa, accusantium, sapiente illo hic dicta aut.
+              Neque quos dolorum fugiat ex eligendi saepe at corrupti a alias animi. Commodi, quas molestias. Maiores obcaecati voluptatibus quidem. 
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque magnam assumenda dolorum ratione maiores labore. Suscipit dolorem dolores ex et sint ab corrupti aut repellat.
+            </p>
+            <button class="largeRoomPreview__availBtn" onclick="window.location.href='book.html'">
+              Check availability
+            </button>
+          </div>
+        </article>
+
+        <article class="largeRoomPreview r-flex" id="roomPremium">
+          <div class="largeRoomPreview__imgAndList">
+            <img src="assets/photos/04-day.jpg" alt="">
+            <h3>Premium</h3>
+            <ul class="largeRoomPreview__list">
+              <li>
+                1 Kingsize double bed + soda bed
+              </li>
+              <li>
+                51 sqm
+              </li>
+              <li>
+                Free Wi-fi
+              </li>
+              <li>
+                Free parking
+              </li>
+              <li>
+                Limited cats
+              </li>
+              <li>
+                Private terrace
+              </li>
+              <li>
+                Bible 2$, John 3:16 for life
+              </li>
+            </ul>
+          </div>
+          <div class="largeRoomPreview__textAndBtn c-flex">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque harum nulla repudiandae corporis dolorem deserunt exercitationem earum et corrupti inventore enim unde dolores aliquid ipsa, accusantium, sapiente illo hic dicta aut. 
+              Neque quos dolorum fugiat ex eligendi saepe at corrupti a alias animi. Commodi, quas molestias. 
+              Maiores obcaecati voluptatibus quidem. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque magnam assumenda dolorum ratione maiores labore. 
+              Suscipit dolorem dolores ex et sint ab corrupti aut repellat.
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque harum nulla repudiandae corporis dolorem deserunt exercitationem earum et corrupti inventore enim unde dolores aliquid ipsa, accusantium, sapiente illo hic dicta aut.
+              Neque quos dolorum fugiat ex eligendi saepe at corrupti a alias animi. Commodi, quas molestias. Maiores obcaecati voluptatibus quidem. 
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque magnam assumenda dolorum ratione maiores labore. Suscipit dolorem dolores ex et sint ab corrupti aut repellat.
+            </p>
+            <button class="largeRoomPreview__availBtn" onclick="window.location.href='book.html'">
+              Check availability
+            </button>
+          </div>
+        </article>
+        
+      </section>
+
+    </main>
+    
+    <footer class="footer r-flex" id="contact">
+      <article class="contact c-flex">
+        <h3 class="contact__title whiteText">
+          Adress
+        </h3>
+        <p class="contact__adress contact__text whiteText">
+          Bonz.ai resort
+        </p>
+        <p class="contact__adress contact__text whiteText">
+          2023 Las Vegas Blvd S, Las Vegas, NV 99999, USA
+        </p>
+        <p class="contact__phone contact__text whiteText">
+          +1 000-000-0000
+        </p>
+        <p class="contact_copyright contact__text whiteText ">
+          © 2023 Charmville resort, Inc. 
+        </p>
+      </article>
+      <article class="socialMedia">
+        <h3 class="contact__title socialMedia__title whiteText">
+          Social Media
+        </h3>
+        <a href="book.html" class="socialMedia__link contact__text">
+          Ye, we dont really do social media
+        </a>
+      </article>
+    </footer>
+
+  </div>
+  
+</body>
+</html>
