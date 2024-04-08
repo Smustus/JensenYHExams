@@ -1,2 +1,2 @@
 # Exams
-All non currenty ongoing exams provided by Jensens Yrkeshögskola
+All non currently ongoing exams provided by Jensens Yrkeshögskola
