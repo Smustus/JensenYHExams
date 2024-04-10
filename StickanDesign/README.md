@@ -47,3 +47,7 @@ Technical Requirements:
   <li>There should be a design system (i.e., components such as input fields, buttons, some colors, and maximum two fonts, and this design system should be used on the website). Example for inspiration: https://ux.mailchimp.com/patterns/color</li>
   <li>It should be component-based, meaning there should be a CSS file with component classes to be used for the pages according to the above specifications.</li>
   <li>The pages implemented in HTML/CSS.</li>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+My figma design: https://www.figma.com/file/09SxA9prPKkxmdDjH53MLd/StickanDesignExam?type=design&node-id=0-1&mode=design&t=YTacm6si7VQrtc0v-0 
