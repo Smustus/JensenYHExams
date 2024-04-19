@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+
+  .header__title {
+    text-transform: uppercase;
+    color: black;
+    text-align: center;
+  }
+}
+

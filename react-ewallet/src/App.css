@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+#root {
+  max-width: 1280px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'PT Mono', monospace;
+}
+
+body {
+  display: flex;
+  place-items: center;
+  min-width: 360px;
+  min-height: 100vh;
+}
+
+h1, h2 {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: clamp(2.0rem, 5vw, 2.5rem);
+  margin: 1%;
+}
+
+button:active {
+  transform: scale(98%);
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  margin: 1%;
+}
+
+a:hover {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: underline;
+}
+
+.wrapper {
+  background-color: white;
+  width: 100vw;
+  min-width: 360px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2%;
+}
